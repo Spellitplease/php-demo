@@ -10,11 +10,18 @@
 <body>
   
 <?php include "includers/header.php"; ?>
-<div class=" col-md-6">
-  <?php include "register.php"; ?>
-</div>
+
+
+
 <div class="container">
+<?php include "register.php"; ?>
 </div>
+
+
+
+
+
+
 </body>
 </html>
 

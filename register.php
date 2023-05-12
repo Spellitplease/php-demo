@@ -8,12 +8,12 @@ $errors = array();
 
 
 
-if(empty($_POST['username'])){
+if(empty($_POST['username']) || !preg_match('/^[a-z0-9_]+$/', $_POST['username'])){
 
-    $errors['username'] = "Vous n'avez pas renseigné votre pseudo";
+    $errors['username'] = "Votre pseudo n'est pas valide (alphanumérique)";
 }
 
-var_dump($errors);
+debug($errors);
 
 
 }
@@ -34,22 +34,22 @@ var_dump($errors);
 <form action="" method="POST">
 <div class="form-group">
     <label for="">Pseudo</label>
-    <input id="username" type="text" name="username" class="form-control" required>
+    <input id="username" type="text" name="username" class="form-control" >
 </div>
 
 <div class="form-group">
     <label for="">Email</label>
-    <input type="email" name="email" class="form-control"required>
+    <input type="email" name="email" class="form-control">
 </div>
 
 <div class="form-group">
     <label for="">Mot de passe</label>
-    <input type="password" name="password" class="form-control" required>
+    <input type="password" name="password" class="form-control" >
 </div>
 
 <div class="form-group">
     <label for="">Confirmez votre mot de passe</label>
-    <input type="password" name="password_confirm" class="form-control" required>
+    <input type="password" name="password_confirm" class="form-control" >
 </div>
 <button type="submit" class="btn btn-primary">M'inscrire</button>
 </form>
