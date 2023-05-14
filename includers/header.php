@@ -14,7 +14,7 @@
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="register.php">S'inscrire</a></li>
+        <li><a href="index.php">S'inscrire</a></li>
         <li><a href="login.php">Se connecter</a></li>
       </ul>
     </div>
